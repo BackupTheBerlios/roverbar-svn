@@ -1,0 +1,126 @@
+MP3 JUKEBOX
+-----------
+
+Target of the project is to create a physically 
+acessible MP3-Jukebox/Trading-Post. The device is 
+here to support the exchange of mp3s with friends 
+in a semi-private enviroment.
+
+TOC
+ - MP3 JUKEBOX
+ - DATA MINING
+ - TARGET DEVICES
+ - DOCS
+ - LICENSE
+
+Since all mp3-players in switzerland have royalties 
+slapped on them. This system is absolutley legal and
+consists of a way to share music in a convenient way 
+as well as a jukebox for the night.
+
+It is intended to get installed at social gathering 
+places like the 0 series prototype here is in a private
+den open to the leadership of the scouts Pfadi Patria
+Bern. Most of these users regularly bring in their mp3
+player to a weekly social meeting where people talk, 
+party and listen to music. Right now at the begining of
+the project, users usually just make a grab for the plug 
+connected to the amp and plug their sound in. often tracks
+don't get listened through, at other times some put in 
+a short playlist on repeat and that doesn't get noticed 
+for hours (until the sound really sucks). This system
+aims to support its users in keeping the sound diverse
+and on a good track with out to much interaction.
+
+The main interface will finally be a touch screen with
+on board virtual keyboard. For now the touch screen is
+replaced by an internal (in the screen) trackball. This
+is due to the reason that the prototype was actually 
+created on a NULL budget with almost no funding. Thus a 
+modern SoC would probablly bring about the same
+performance as the aging PIII thats in use now.
+
+The user interface is made up of the excellent matchbox-
+keyboard and amarok. For touch screen purposes amaroks
+layout (button sizes) would probably need quite some 
+tweaking. on the other hand an always randomizing 
+interface with a hype/plonk system would be rather nice 
+as an mp3 player too!
+
+Sharing music is a quite manual process for now. The 
+standard amarok interface allows users to drag an drop 
+stuff between devices and the local collection and to synch
+them in a click. basic transcoding is also supported but i 
+dont expect to get loads of users with strange formats no one
+elses player can play.
+
+
+DATA MINING
+-----------
+Yes, to be honest i expect to get some meaningful data out
+of this experiment. First of all there's last.fm, the data 
+aggregated there is probablly gonna make more sense for the 
+users. Then i have installed some scripts to just dump some 
+data on the average usage. Maybe some day i'll be able to 
+publish something based off that data. The data im trying to 
+get is like follows:
+
+- local hard disk space (free/used/total) (all drives in /media 
+  && /etc/fstab)
+- external devices seen (as reported by hal, on mounting)
+- uptimes (amount and day)
+- file stats (type of media files ie. mp3/wma/...)
+- file count/file sizes
+- amarok stats dump
+
+All collected data will be handled carefully and anonymously.
+Later i will probably do a hand-out questionaire to get some 
+exacter demographics on the users.
+Most of the data will get dumped on halt. Thats why the system 
+does take some time to halt itself. 
+
+
+TARGET DEVICES
+--------------
+For testing the MP3 Player integration the following
+devices were available:
+
+- Creative Zen Touch (mtp)
+- Palm LifeDrive (mass storage)
+- various other mass storage devices (that are less 
+  broken than the palm)
+- (3d gen ipod)
+
+I still need to find an ipod for testing, the needed 
+libs are installed so it should actually work.
+
+If you want your device to work, talk to me and we'll
+devise a solution. If your player has too much drm 
+consider buying a better one or getting your mp3s 
+elsewhere.
+
+DOCS
+----
+
+Look in /usr/share/doc on the box and you'll find docs aplenty!
+
+LICENSE
+-------
+The Roverbar MP3-Station is free software: you can redistribute it 
+and/or modify it under the terms of the GNU General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or (at your option) any later version.
+
+The Roverbar MP3-Station is distributed in the hope that it will 
+be useful, but WITHOUT ANY WARRANTY; without even the implied 
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with the Roverbar MP3-Station.  If not, see 
+<http://www.gnu.org/licenses/>.
+
+Hack, have fun and do what you like with it. But don't 
+blame me if you break anything :)
+
+haerzlech di linggi Karbon

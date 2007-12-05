@@ -1,0 +1,79 @@
+MAINTENANCE
+-----------
+
+This file is part of the Roverbar MP3-Station.
+
+The Roverbar MP3-Station is free software: you can redistribute it 
+and/or modify it under the terms of the GNU General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or (at your option) any later version.
+
+The Roverbar MP3-Station is distributed in the hope that it 
+will be useful, but WITHOUT ANY WARRANTY; without even the 
+implied warranty of MERCHANTABILITY or FITNESS FOR A 
+PARTICULAR PURPOSE.  See the GNU General Public License for 
+more details.
+
+You should have received a copy of the GNU General Public License
+along with the Roverbar MP3-Station.  If not, see 
+<http://www.gnu.org/licenses/>.
+
+2007 - Lucas S. Bickel v/o Karbon <karbon@pfadipatria.com>
+
+If your reading this, please tell me, you know linux
+and this isn't the first distro you considering to 
+maintain. If it is please alawys have a backup admin 
+as well as a good working backup of / (basically 
+everything except /media). Even then, have a 
+backup admin!
+
+To maintain this maschine and make shure it always 
+stays secure follow this doc.
+
+About once a month a basic security check and 
+appropriate upgrade should do fine. If you're
+paranoid you can do this more often. run the 
+following lines
+
+	emerge --sync 
+	glsa-check --list affected
+
+Remember to never emerge --sync more than once daily!
+
+While we're at it you might as well upgrade portage. 
+This may generate a bit more downtime that syncing 
+portage, but it ensures a stable upgrade path for 
+quite some time!
+
+	emerge portage --upgrade --verbose --ask
+
+If glsa-check listed any stuff before some upgrading is most
+likley needed, do some emerging!
+Look at emerge --help as well as man emerge and man portage 
+Before doing this the first time and then merge away:
+
+	glsa-check --pretend affected
+
+This command will output lots of _howto_ you need to follow
+quite a lot of it will be upgrading packages, that basically
+goes like follows:
+
+	emerge <packagename> --upgrade --verbose --ask
+
+and after that finishes (it may take hours)
+
+	etc-update
+
+if under any circumstances you should want to do a full upgrade 
+of the system (perhaps to support new media types or just be 
+current) you should go along the lines of:
+
+	emerge world --deep --upgrade --verbose --ask
+
+This will probably upgrade loads of components and you will 
+need to reserve plenty of time (days) if you want everything
+back up and running the way it was till now. NEVER do this if 
+you aren't familiar with the patches and /usr/local/portage/ 
+or if you don't know gentoos conf management on a regular 
+basis! There are no loopholes and I won't repair a screwed 
+up system.

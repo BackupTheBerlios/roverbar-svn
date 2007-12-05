@@ -1,0 +1,15 @@
+AC_INIT(roverbar-mp3station, 0.2, karbon@pfadipatria.com)
+#     information on the package
+AC_CONFIG_SRCDIR([./])
+#     checks for programs
+#     checks for libraries
+#     checks for header files
+#     checks for types
+#     checks for structures
+#     checks for compiler characteristics
+#     checks for library functions
+#     checks for system services
+
+AC_CONFIG_FILES([Makefile])
+AM_INIT_AUTOMAKE([])
+AC_OUTPUT
