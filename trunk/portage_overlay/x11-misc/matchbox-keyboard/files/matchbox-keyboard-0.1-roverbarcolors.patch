@@ -1,5 +1,6 @@
---- src/matchbox-keyboard-ui-xft-backend.c-orig	2007-11-16 01:42:43.000000000 +0100
-+++ src/matchbox-keyboard-ui-xft-backend.c	2007-11-18 22:13:26.000000000 +0100
+diff -Naur matchbox-keyboard-0.1-orig/src/matchbox-keyboard-ui-xft-backend.c matchbox-keyboard-0.1/src/matchbox-keyboard-ui-xft-backend.c
+--- matchbox-keyboard-0.1-orig/src/matchbox-keyboard-ui-xft-backend.c	2007-12-05 20:44:03.000000000 +0100
++++ matchbox-keyboard-0.1/src/matchbox-keyboard-ui-xft-backend.c	2007-12-05 20:45:27.000000000 +0100
 @@ -317,12 +317,12 @@
  
    /* Crusty theme stuff  */
@@ -7,15 +8,15 @@
 -  alloc_color(ui, &xft_backend->xcol_c5c5c5, "#c5c5c5");
 -  alloc_color(ui, &xft_backend->xcol_d3d3d3, "#d3d3d3");
 -  alloc_color(ui, &xft_backend->xcol_f0f0f0, "#f0f0f0");
--  alloc_color(ui, &xft_backend->xcol_f8f8f5, "#f8f8f8");
+-  alloc_color(ui, &xft_backend->xcol_f8f8f5, "#f8f8f5");
 -  alloc_color(ui, &xft_backend->xcol_f4f4f4, "#f4f4f4");
 -  alloc_color(ui, &xft_backend->xcol_a4a4a4, "#a4a4a4");
-+  alloc_color(ui, &xft_backend->xcol_c5c5c5, "#050505"); /* key borders */
-+  alloc_color(ui, &xft_backend->xcol_d3d3d3, "#050505"); /* key corners (3 pixels per corner) */
-+  alloc_color(ui, &xft_backend->xcol_f0f0f0, "#050505"); /* key corners (outermost pixel) */
-+  alloc_color(ui, &xft_backend->xcol_f8f8f5, "#b80009"); /* key background */
-+  alloc_color(ui, &xft_backend->xcol_f4f4f4, "#b20003"); /* background (quite blue, more tweaking needed) */
-+  alloc_color(ui, &xft_backend->xcol_a4a4a4, "#050505"); /* ??? */
++  alloc_color(ui, &xft_backend->xcol_c5c5c5, "#050505");
++  alloc_color(ui, &xft_backend->xcol_d3d3d3, "#050505");
++  alloc_color(ui, &xft_backend->xcol_f0f0f0, "#050505");
++  alloc_color(ui, &xft_backend->xcol_f8f8f5, "#b80009");
++  alloc_color(ui, &xft_backend->xcol_f4f4f4, "#b80009");
++  alloc_color(ui, &xft_backend->xcol_a4a4a4, "#050505");
  
    return True;
  }
