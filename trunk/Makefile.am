@@ -1,2 +1,4 @@
-#bin_PROGRAMS = do_stats.sh make_exports.sh src/
-dist_bin_SCRIPTS = do_stats.sh make_exports.sh src/
+dist_bin_SCRIPTS = src/do_stats.sh src/make_exportfs.sh 
+
+man1_MANS = doc/roverbar-hacking.man doc/roverbar-maintenance.man
+
